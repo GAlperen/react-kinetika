@@ -1,0 +1,214 @@
+.App {
+  display: flex;
+  height: 100vh;
+  background-color: #eeeeee;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.App-logo {
+  height: 50px;
+}
+
+.App-title {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: oblique;
+  font-size: 40px;
+  font-weight: 100;
+  font-style: italic;
+  color: white;
+  margin-left: 25%;
+  flex-grow: 1;
+  letter-spacing: 10px;
+}
+
+.connection-icons {
+  display: flex;
+  align-items: center; /* Ensure icons are aligned vertically */
+}
+
+.App-icon {
+  height: 30px;
+  margin-left: 10px;
+}
+
+.left-panel {
+  width: 45%;
+  padding: 20px;
+  background-color: #222831;
+  color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-panel {
+  width: 55%;
+  padding: 20px;
+  background-color: #222831;
+  color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.scenario-section {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dial-button-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.dial-buttons {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 200px;
+}
+
+.dial-child-button {
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
+  background: #0f5e62;
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.dial-child-button.selected {
+  background: rgb(0, 125, 133);
+}
+
+.dial-toggle,
+.dial-button__cloak {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #eee;
+  display: grid;
+  place-content: center;
+}
+
+.dial-toggle svg {
+  width: 36px;
+  height: 36px;
+  fill: #000;
+}
+
+.control-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.start-button {
+  width: 120px;
+  height: 60px;
+  background-color: rgb(25, 128, 25);
+  color: white;
+  font-size: 18px;
+  border: black solid transparent;
+  cursor: pointer;
+}
+
+.stop-button {
+  width: 120px;
+  height: 60px;
+  background-color: rgb(128, 25, 25);
+  color: white;
+  font-size: 18px;
+  border: black solid transparent;
+  cursor: pointer;
+}
+
+.data-section {
+  margin-bottom: 20px;
+}
+
+.data-display {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #4c4f54;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.data-label {
+  font-weight: bold;
+}
+
+.data-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.map-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.map-placeholder {
+  width: 100%;
+  padding-top: 65%;
+  position: relative;
+  background-color: #444;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-placeholder-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cloaked-icon {
+  display: none; /* Hide the cloaked icon by default */
+}
+
+.clock {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-variation-settings: inherit;
+  font-size: 24px;
+  margin-top: automatic;
+  margin-right: 10px;
+  text-align: center;
+}
